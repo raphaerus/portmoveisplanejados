@@ -1,0 +1,22 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* Configuração do Tema */
+@theme {
+  /* Cores Personalizadas - O Tailwind v4 detecta variáveis que começam com --color- */
+  
+  --color-plantGreen: #133E2B;
+  --color-plantGreen-dark: #0F3323;
+  --color-plantTerracotta: #B76E49;
+  --color-plantBeige: #F2F4E9;
+
+ /* VINCULANDO AS FONTES AQUI: */
+  /* Agora 'font-sans' usará Inter e 'font-serif' usará Playfair */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui;
+  --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
+}
+
+/* Configurações do DaisyUI (opcional) */
+:root {
+  --rounded-btn: 9999px; /* Força botões redondos se quiser */
+}
