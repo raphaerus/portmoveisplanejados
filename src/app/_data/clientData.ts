@@ -1,9 +1,11 @@
-// app/_data/clientData.ts
+import { ClientConfig } from "../_types/clientConfig";
 
-export const clientData = {
+export const clientData: ClientConfig = {
     businessName: "Marcenaria Madeira de Ouro",
     whatsappNumber: "5596991234567", // Coloque seu número aqui para testar
     location: "Macapá, Amapá",
+    instagram: "https://instagram.com/madeiradeouro_exemplo", // Deixe vazio "" para não aparecer
+    fullAddress: "Av. das Oliveiras, 123 - Jardim Equatorial, Macapá - AP", // Deixe vazio "" para não aparecer
 
     // Cores personalizadas (Opcional, se quiser usar no tailwind config)
     primaryColor: "#8B4513",

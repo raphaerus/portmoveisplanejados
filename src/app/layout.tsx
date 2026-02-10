@@ -17,9 +17,13 @@ const playfair = Playfair_Display({
   display: "swap",
 });
 
+import { clientData } from "@/_data/clientData";
+
+// ... imports remain the same
+
 export const metadata: Metadata = {
-  title: "Plants Avenue",
-  description: "Bring the nature close to you",
+  title: clientData.businessName,
+  description: clientData.hero.subtitle,
 };
 
 export default function RootLayout({

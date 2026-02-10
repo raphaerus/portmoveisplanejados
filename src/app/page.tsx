@@ -1,6 +1,7 @@
 import MasonryGallery from '@/components/MasonryGallery';
 import { clientData } from "@/_data/clientData";
 import { ArrowRight } from 'lucide-react'; // Instale lucide-react se não tiver, ou use SVG
+import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
@@ -35,10 +36,7 @@ export default function Home() {
       <MasonryGallery />
 
       {/* RODAPÉ SIMPLES */}
-      <footer className="bg-stone-900 text-stone-400 py-8 text-center">
-        <p>© 2024 {clientData.businessName}. Todos os direitos reservados.</p>
-        <p className="text-sm mt-2">Atendendo em {clientData.location}</p>
-      </footer>
+      <Footer />
 
       {/* BOTÃO FLUTUANTE WHATSAPP (Extra que cliente ama) */}
       <a

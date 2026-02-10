@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from "next/image";
 import { clientData } from '@/_data/clientData';
 
 export default function MasonryGallery() {
@@ -16,12 +17,16 @@ export default function MasonryGallery() {
                         <div key={img.id} className="break-inside-avoid relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
 
                             {/* Imagem */}
-                            <img
-                                src={img.src}
-                                alt={img.alt}
-                                className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500"
-                                loading="lazy"
-                            />
+                            <div className="relative w-full h-auto">
+                                <Image
+                                    src={img.src}
+                                    alt={img.alt}
+                                    width={500}
+                                    height={500}
+                                    className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500"
+                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                />
+                            </div>
 
                             {/* Overlay com Texto (Só aparece ao passar o mouse) */}
                             <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
